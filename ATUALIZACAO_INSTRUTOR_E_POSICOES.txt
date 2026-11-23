@@ -1,0 +1,7 @@
+ATUALIZAÇÃO DO COMPONENTE VISUAL
+
+A demonstração 2D animada baseada apenas nos textos de movimento e posição foi removida. Uma trajetória esquemática poderia ser confundida com a execução correta do sinal.
+
+O espaço visual agora informa, em cada ficha e cartão, quando a demonstração específica está pendente de validação. O leitor e o catálogo não inventam movimentos nem apresentam a tradução automática do VLibras como confirmação linguística.
+
+Quando existir vídeo/animação específica com autorização e revisão por pessoas fluentes em Libras e educadores bilíngues, a mídia poderá ser vinculada ao respectivo registro.

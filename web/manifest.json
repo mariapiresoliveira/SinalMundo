@@ -1,0 +1,9 @@
+{
+  "name": "SinalMundo",
+  "short_name": "SinalMundo",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F5F8F6",
+  "theme_color": "#6D55D9",
+  "description": "O mundo ensina Libras."
+}

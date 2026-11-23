@@ -1,0 +1,21 @@
+ATUALIZAÇÃO — CRIADOR DE HISTÓRIAS LIVRES
+
+O que mudou:
+- A criança pode digitar o título e o texto livremente, sem escolher personagem, lugar ou objeto de uma lista fechada.
+- O texto é dividido automaticamente em trechos/páginas.
+- O aplicativo identifica palavras do catálogo de 90 sinais (ignorando acentos, maiúsculas e pontuação, e reconhecendo alguns plurais comuns).
+- Cada termo reconhecido exibe um botão de tradução/demonstração pelo Widget oficial do VLibras.
+- Cada trecho também pode ser enviado ao VLibras como texto livre, mesmo que não haja termo exato no catálogo.
+- Ao guardar a história, ela aparece na Biblioteca e abre no leitor, que mostra as demonstrações correspondentes em cada trecho.
+- As histórias criadas ficam disponíveis durante a sessão atual; armazenamento permanente ainda não foi configurado.
+
+Como abrir no Windows:
+1. Extraia o ZIP atualizado numa pasta nova.
+2. No PowerShell, entre na pasta SinalMundo_MVP (a que contém pubspec.yaml).
+3. Execute: flutter pub get
+4. Execute: flutter run -d chrome
+
+Nota importante sobre demonstrações:
+- O botão abre uma página com o termo/trecho preparado. A criança precisa abrir o Widget VLibras e selecionar o texto para iniciar a tradução.
+- O Widget é tradutor automático. A saída pode não corresponder a um sinal lexical específico, à intenção da frase ou à variante regional.
+- Registros sem demonstração linguística revisada permanecem identificados como aguardando validação. Não há movimentos genéricos apresentados como sinais corretos.

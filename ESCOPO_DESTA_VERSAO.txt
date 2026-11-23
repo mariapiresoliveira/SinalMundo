@@ -1,0 +1,13 @@
+SINALMUNDO MVP — REVISÃO VISUAL E FUNCIONAL
+
+Inclui tema visual unificado, cartões responsivos e estados de progresso mais claros. Também corrige a concessão duplicada de XP ao reler histórias já concluídas.
+
+Inclui Início, Mundo Vivo com 10 categorias, Catálogo com 90 registros, fichas dos cinco parâmetros, Biblioteca de Histórias, Criador de Histórias livres, Leitor de Histórias, Árvore da Comunicação, Área do Educador demonstrativa e integração Web do Widget oficial VLibras.
+
+A página auxiliar do VLibras prepara um termo ou trecho de texto. A criança ainda precisa abrir o botão flutuante do Widget e selecionar o texto para solicitar a tradução. Não existe reprodução automática de um sinal lexical específico nesta integração.
+
+As demonstrações individuais dos 90 registros permanecem pendentes de validação. Não são apresentados gestos ou movimentos genéricos como se fossem sinais confirmados.
+
+Não inclui atividades interativas, câmera, reconhecimento facial, reconhecimento automático de Libras ou realidade aumentada. Login, Firebase, sincronização e persistência de histórias ainda não estão conectados.
+
+Os parâmetros do catálogo são transcrições dos PDFs fornecidos e aguardam validação linguística e pedagógica.

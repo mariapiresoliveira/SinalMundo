@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6D55D9">
+  <title>Texto para tradução | SinalMundo + VLibras</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, system-ui, Arial, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: linear-gradient(145deg,#eff7f1,#f3f0ff 58%,#fff9ec); color:#26342e; }
+    header { background:#3f326f; color:white; padding:18px 22px; box-shadow:0 3px 16px #24104a2b; }
+    header strong { font-size:20px; letter-spacing:.2px; }
+    main { width:min(860px, calc(100% - 28px)); margin:30px auto 80px; }
+    .card { background:white; border:1px solid #e1eae4; border-radius:24px; padding:clamp(20px,4vw,34px); box-shadow:0 12px 34px #34215c14; }
+    .eyebrow { color:#6d55d9; font-weight:800; font-size:12px; text-transform:uppercase; letter-spacing:1px; }
+    h1 { margin:9px 0 7px; font-size:clamp(30px,7vw,46px); color:#3f326f; }
+    .category { color:#6f6b82; margin:0 0 22px; }
+    .target { padding:24px; border-radius:18px; border:2px dashed #a99be8; background:#f3f0ff; text-align:center; }
+    #term.long { display:block; white-space:pre-wrap; text-align:left; font-size:clamp(18px,3vw,24px); line-height:1.65; font-weight:700; }
+    .story-hint { display:none; }
+    .target-label { display:block; color:#62558e; font-size:12px; font-weight:700; margin-bottom:8px; }
+    #term { display:inline-block; font-weight:900; font-size:clamp(30px,7vw,42px); color:#3f326f; user-select:text; cursor:text; padding:4px 10px; border-radius:10px; }
+    #term::selection { background:#ded8ff; color:#2e2458; }
+    .hint { color:#514e66; line-height:1.55; margin:20px 0 0; }
+    ol { line-height:1.7; padding-left:22px; color:#514e66; }
+    .note { background:#fff7e3; border:1px solid #f0dda5; border-radius:15px; padding:14px; color:#654c0b; line-height:1.5; font-size:13px; margin-top:20px; }
+    .params { margin-top:18px; padding:16px; background:#f5f8f6; border-radius:15px; color:#535c75; font-size:13px; line-height:1.6; }
+    .params b { color:#3f326f; }
+    .back { display:inline-block; margin:18px 0 0; color:#6d55d9; font-weight:800; text-decoration:none; }
+    footer { text-align:center; padding:14px; color:#85839a; font-size:11px; }
+    #term:focus-visible, .back:focus-visible { outline:3px solid #8bc6df; outline-offset:4px; }
+    @media (max-width: 420px) { header { padding:15px 16px; } header strong { font-size:17px; } main { width:calc(100% - 20px); margin-top:18px; } .card { border-radius:19px; } ol { padding-left:19px; } }
+  </style>
+</head>
+<body>
+  <header><strong>🤟 SinalMundo · Tradução com VLibras 3D</strong></header>
+  <main>
+    <section class="card" aria-labelledby="page-title">
+      <div class="eyebrow">Tradução de texto para Libras</div>
+      <h1 id="page-title">Texto para traduzir</h1>
+      <p class="category" id="category"></p>
+      <div class="target">
+        <span class="target-label" id="target-label">TERMO PARA SELECIONAR NO WIDGET</span>
+        <span id="term" tabindex="0"></span>
+      </div>
+      <p class="hint" id="demo-hint">O avatar 3D do VLibras é carregado pelo serviço oficial. Para iniciar a demonstração:</p>
+      <p id="widget-status" class="category" role="status">Conectando ao Widget oficial do VLibras…</p>
+      <ol>
+        <li>Clique no botão flutuante do VLibras, no canto inferior direito.</li>
+        <li>Com o Widget aberto, passe o cursor sobre o texto destacado acima.</li>
+        <li>Quando o texto ficar realçado, clique nele para iniciar a tradução em Libras.</li>
+      </ol>
+      <div class="note"><b>Importante:</b> o Widget faz tradução automática de texto. A disponibilidade e a forma de realização de um termo podem variar conforme o dicionário, o contexto e o regionalismo. A saída automática deve ser revisada por pessoas fluentes em Libras e educadores bilíngues; não substitui um intérprete humano.</div>
+      <div class="params" id="parameters" hidden></div>
+      <a class="back" href="./">← Voltar ao SinalMundo</a>
+    </section>
+  </main>
+  <footer>O SinalMundo abre o Widget oficial hospedado em vlibras.gov.br. É necessária conexão com a internet.</footer>
+
+  <script>
+    (function () {
+      const qs = new URLSearchParams(window.location.search);
+      const term = qs.get('term') || 'Olá';
+      const category = qs.get('category') || 'Catálogo de sinais';
+      // textContent evita interpretar o termo recebido como HTML.
+      const termNode = document.getElementById('term');
+      termNode.textContent = term;
+      document.getElementById('category').textContent = category;
+      if (new URLSearchParams(window.location.search).get('mode') === 'story' || term.length > 55) {
+        termNode.classList.add('long');
+        document.getElementById('target-label').textContent = 'TRECHO DA HISTÓRIA PARA SELECIONAR NO WIDGET';
+        document.getElementById('page-title').textContent = 'Trecho para traduzir';
+        document.getElementById('demo-hint').textContent = 'O instrutor oficial pode traduzir o trecho selecionado, de acordo com o vocabulário disponível no serviço. Selecione uma frase ou o trecho completo para iniciar:';
+      }
+      const fields = [
+        ['Configuração da mão', qs.get('cm')],
+        ['Ponto de articulação', qs.get('pa')],
+        ['Movimento', qs.get('movement')],
+        ['Orientação da palma', qs.get('orientation')],
+        ['Expressões não manuais', qs.get('enm')]
+      ].filter((x) => x[1]);
+      const box = document.getElementById('parameters');
+      if (fields.length) {
+        box.hidden = false;
+        for (const [label, value] of fields) {
+          const row = document.createElement('div');
+          const b = document.createElement('b');
+          b.textContent = label + ': ';
+          row.appendChild(b);
+          row.appendChild(document.createTextNode(value));
+          box.appendChild(row);
+        }
+      }
+    })();
+  </script>
+
+  <!-- Integração com o Widget oficial do VLibras. -->
+  <script>
+    (function () {
+      const status = document.getElementById('widget-status');
+      const script = document.createElement('script');
+      script.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+      script.async = true;
+      script.onload = function () {
+        if (window.VLibras && window.VLibras.Widget) {
+          new window.VLibras.Widget({
+            rootPath: 'https://vlibras.gov.br/app',
+            avatar: 'icaro',
+            position: 'R'
+          });
+          status.textContent = 'Widget carregado. Abra o botão VLibras no canto da tela.';
+        } else {
+          status.textContent = 'O serviço carregou, mas não iniciou o Widget. Atualize a página.';
+        }
+      };
+      script.onerror = function () {
+        status.textContent = 'Não foi possível carregar o Widget. Confira a conexão e tente novamente.';
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
+</body>
+</html>

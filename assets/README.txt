@@ -1,0 +1,1 @@
+Os diagramas em assets/reference foram recortados dos PDFs de parâmetros de Libras enviados pelo usuário. São referências gerais para os cinco parâmetros, não demonstrações de cada um dos 90 sinais. Consulte FONTES_DO_CATALOGO.md.

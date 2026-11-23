@@ -1,0 +1,18 @@
+SINALMUNDO — CATÁLOGO DE 90 REGISTROS
+
+Cada ficha apresenta os cinco parâmetros transcritos do material de origem:
+- Configuração de mão (CM), com descrição em linguagem natural quando a fonte permite.
+- Ponto de articulação (PA), com descrição da região corporal ou do espaço indicada no manual.
+- Movimento (M).
+- Orientação da palma (O).
+- Expressões não manuais (ENM).
+
+As fichas também exibem contexto/observação, variação regional quando informada e página da fonte.
+
+DEMONSTRAÇÃO VISUAL
+Os PDFs não incluem vídeos individuais dos 90 sinais. Os diagramas incorporados são referências gerais dos parâmetros, não reproduções dos sinais. A área visual de cada registro informa explicitamente que a demonstração específica está pendente. O projeto não anima trajetórias genéricas nem apresenta gestos inventados como sinais corretos.
+
+VALIDAÇÃO
+Todos os registros permanecem pendentes de revisão linguística e pedagógica por pessoas surdas/fluentes em Libras e educadores bilíngues. A tradução do Widget VLibras é automática e não substitui essa validação.
+
+CONTAGEM: 90 registros em 10 categorias (Animais 10; Escola 10; Família 10; Comida 10; Emoções 10; Natureza 8; Cidade 8; Esportes 8; Arte 8; Rotina 8).

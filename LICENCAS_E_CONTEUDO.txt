@@ -1,0 +1,9 @@
+LICENÇAS / CONTEÚDO — SINALMUNDO
+
+1. O catálogo contém 90 termos transcritos dos PDFs enviados e aguarda revisão por pessoas surdas/fluentes em Libras e educadores bilíngues.
+2. O espaço visual local informa quando a demonstração específica está pendente; os diagramas anexos são referências gerais e não representam uma execução lexical exata.
+3. O instrutor 3D é carregado remotamente pelo Widget oficial do VLibras. O ZIP não redistribui malhas, avatares ou arquivos de animação da suíte.
+4. A integração foi preparada com base na informação do responsável pelo SinalMundo de que recebeu permissão. Guardar a autorização por escrito e confirmar que abrange uso educacional, incorporação do Widget, avatar e traduções no aplicativo.
+5. O Widget faz tradução automática de texto selecionado; a tradução pode não corresponder a um sinal isolado, a uma variante regional ou ao contexto. Cada demonstração deve ser revisada.
+6. Nenhuma câmera, captura de vídeo, reconhecimento facial ou reconhecimento automático de Libras é utilizado.
+7. A demonstração via Widget requer internet e depende da disponibilidade do serviço oficial.

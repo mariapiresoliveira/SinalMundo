@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="description" content="SinalMundo: o mundo ensina Libras.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6D55D9">
+  <title>SinalMundo</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <script>
+    // Carregamento assíncrono: se o serviço estiver indisponível, o Flutter ainda abre.
+    (function () {
+      const script = document.createElement('script');
+      script.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+      script.async = true;
+      script.onload = function () {
+        if (window.VLibras && window.VLibras.Widget) {
+          new window.VLibras.Widget({
+            rootPath: 'https://vlibras.gov.br/app',
+            avatar: 'icaro',
+            position: 'R'
+          });
+        }
+      };
+      script.onerror = function () {
+        console.warn('Widget VLibras indisponível no momento.');
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

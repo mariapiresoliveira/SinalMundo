@@ -1,0 +1,10 @@
+CRIADOR DE HISTÓRIAS LIVRES — SINALMUNDO
+
+- A criança pode escrever uma história livremente, sem precisar escolher personagem/lugar/objeto de uma lista fechada.
+- O texto é dividido em trechos para leitura.
+- O catálogo local de 90 sinais é pesquisado sem diferenciar maiúsculas, acentos e pontuação; alguns plurais comuns também são reconhecidos.
+- Cada termo reconhecido recebe uma ficha e um botão de demonstração pelo Widget VLibras.
+- Cada trecho completo também tem um botão para envio ao Widget VLibras.
+- No Widget, é necessário abrir o botão flutuante e selecionar o texto na página de demonstração para iniciar a tradução.
+- Palavras sem correspondência no catálogo não recebem movimentos inventados. O Widget poderá tentar traduzir a frase, mas a saída automática deve ser conferida por educadores fluentes em Libras e pessoas surdas.
+- Histórias criadas ficam na biblioteca durante a sessão atual; não são persistidas após fechar o app nesta versão.

@@ -1,0 +1,45 @@
+SINALMUNDO — REVISAO VISUAL E FUNCIONAL
+
+O QUE FOI AJUSTADO
+
+1. Aparencia e consistencia
+- Tema visual consolidado com cores suaves, selecao de texto, indicadores de progresso e folhas modais padronizadas.
+- Cartoes com bordas, cantos arredondados e sombra discreta.
+- Proporcoes dos cartoes ajustadas para telas pequenas, medias e largas.
+- Indicadores do inicio mostram nivel, XP e quantidade de sinais registrados.
+- A Arvore da Comunicacao muda de broto para folhas, arvore com frutos e arvore com borboletas conforme o progresso.
+
+2. Progresso e pontuacao
+- Concluir a mesma historia novamente nao concede XP duplicado.
+- A leitura repetida informa que a historia ja foi concluida.
+- O botao de registrar um sinal muda de estado depois do primeiro registro.
+- Temas explorados deixam de oferecer a mesma recompensa novamente.
+- As recompensas de +5 XP por sinal, +30 XP por historia e +50 XP por tema sao informadas na interface.
+
+3. Libras e VLibras
+- Os botoes agora dizem que preparam o termo ou trecho no Widget.
+- As instrucoes deixam claro que a traducao nao comeca automaticamente: a pessoa ainda precisa abrir o Widget e selecionar o texto.
+- A demonstracao especifica de cada sinal continua marcada como pendente quando nao ha midia validada.
+- Nenhum movimento de sinal foi inventado.
+
+4. Execucao no Windows
+- O arquivo ABRIR_NO_CHROME.bat nao recria a pasta web, preservando a pagina personalizada do VLibras.
+- O arquivo verifica se o Flutter esta no PATH, baixa dependencias, executa flutter analyze e flutter test e inicia o Chrome.
+- O README foi atualizado para refletir o fluxo.
+
+5. Testes adicionados
+- Testes para recompensar historias apenas uma vez.
+- Teste de avanco de nivel ao atingir a meta de XP.
+- Teste para impedir repeticao das recompensas de tema e sinal.
+
+VALIDACOES REALIZADAS NESTA SESSAO
+- Integridade do ZIP de origem.
+- 90 registros no CSV e 90 registros no catalogo Dart.
+- Caminhos de imports relativos e assets referenciados.
+- Delimitadores e fechamento basico de strings nos arquivos Dart.
+- Sintaxe dos scripts JavaScript nas paginas Web.
+
+LIMITACAO DE TESTE
+O ambiente usado para esta revisao nao possui Flutter nem Dart instalados. Por isso, nao foi possivel executar flutter analyze, flutter test ou compilar/abrir o aplicativo. Esses comandos estao incluidos no arquivo ABRIR_NO_CHROME.bat para serem executados no computador com Flutter instalado.
+
+O progresso, as historias criadas e os registros continuam locais e temporarios: nao ha persistencia apos fechar o aplicativo nem sincronizacao com Firebase nesta versao.
